@@ -22,7 +22,6 @@ This framework brings Web and API automation together in a single Maven project 
 - Validation of HTTP status codes and response bodies.
 - GET request testing and response validation.
 - Reusable API client and service layers.
-- Configuration management for API endpoints.
 - Scenario-level test data management using Scenario Context.
 
 ## Technology Stack
@@ -49,13 +48,17 @@ GS1_Automation_Assessments
 ├── src
 │   ├── main
 │   │   └── java
-│   │       ├── API_java
-│   │       │   ├── BaseApiClient.java
-│   │       │   ├── BookService.java
-│   │       │   ├── ConfigManager.java
-│   │       │   └── ScenarioContext.java
-│   │       │
-│   │       └── web
+│   │       ├── drivers
+|   |       |    ├── DriverFactory.java
+|   |       ├── pages
+|   |       |    ├──BasePafe.java
+|   |       |    ├──DynamicLoadingPage.java
+|   |       |    ├──File_Uploas_Pafe.java
+|   |       |    └──HomePage.java
+|   |       └── API_java
+│   │            ├── BaseApiClient.java
+│   │            ├── BookService.java
+│   │            └── ScenarioContext.java
 │   │
 │   └── test
 │       ├── java
